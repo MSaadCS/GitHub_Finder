@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #545b6b !important;
+}
+p{
+margin : 0 !important;
+}
+ul{
+  padding : 0;
+}
+a{
+  text-decoration: none;
+}
+li {
+  list-style : none;
+}
+.font-weight-bold{
+  font-weight : bold;
+}
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.navbar{
+  background-color : #252931;
+}
+.navbar a{
+  font-size: 14px;
+  text-decoration: none ;
+}
+.navbar img{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.user_card .card{
+  transform: scale(1);
+  transition: .3s all ease-in-out;
+}
+.user_card a:hover .card{
+  transform: scale(1.1);
+  transition: .3s all ease-in-out;
+}
+.user_card .card p{
+  transition: .3s all ease-in-out;
+}
+.user_card a:hover .card p{
+  color: rgb(215 207 207) !important;
+  transition: .3s all ease-in-out;
+}
+.search-btn{
+  padding: 7px 30px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: none;
+  
+}
+.search-btn:not([disabled]){
+  background-color: #252931;
+  color: white;
+  transition: .2s all ease-in-out;
+}
+.search-text{
+  border: none;
+  padding: 7px 10px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 300px;
+}
+.search-btn:not([disabled]):hover{
+  transition: .2s all ease-in-out;
+  background-color: #656f85;
+}
+input:focus-visible {
+  outline: unset;
+}
+.clear{
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+.user_data_profile-img::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4e4b4ba8;
+  border-radius: 10px;
+}
+.user_personal_infos .data{
+  background-color: #565f6f;
+  padding: 5px 15px;
+  border-right: solid 1px white;
+}
+.user_personal_infos .data:last-child{
+  border-right: none;
+}
+.user_personal_infos .icon{
+  font-size: 40px;
+}
+.repo_info {
+  background-color: #3d4350;
+  padding: 20px 25px;
+  border-radius: 10px;
+}
+.repo_info a{
+  text-decoration: none;
+}
+.repo_info a:hover{
+  text-decoration: underline;
+}
+
+
+.views{
+  color: #0081ff;
+  background-color: #252931;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+.stars{
+  color: rgb(22, 244, 22);
+  background-color: #252931;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+.open_issues{
+  color: rgb(244, 65, 29);
+  background-color: #252931;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+.forks{
+  color: rgba(240, 240, 19, 0.911);
+  background-color: #252931;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+footer{
+  background-color: #3d4350;
+  margin-top: auto;
+}
