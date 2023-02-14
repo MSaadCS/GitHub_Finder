@@ -1,6 +1,11 @@
+import { useContext } from "react";
+import GitHubProvider  from "../Context/GitHub/GitHubContext";
 import { UserRequest } from "../components/Users/UserRequest";
 import { UserSearch } from "../components/Users/UserSearch";
+
+
 export const Home = () => {
+  const ctxData = useContext(GitHubProvider);
   return (
     <>
    
@@ -11,8 +16,9 @@ export const Home = () => {
           </div>
         </div> 
       </div>
-
+      {ctxData.usersList.length !== 0 ? 
       <UserRequest/>
+      : ctxData.usersList }
     </>
   )
 }

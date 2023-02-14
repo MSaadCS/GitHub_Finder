@@ -37,10 +37,7 @@ export const GitHubProvider = ({children})=>{
         const api_response = await fetchAPI.json();
 
         const search_result = api_response.items;
-        // setUsersList(api_response);
-        // setSpinner(false);
-
-        // then make loader equal false to hide it
+       
         dispatch({
             type : 'GET_USERS',
             payload : search_result
@@ -105,7 +102,7 @@ export const GitHubProvider = ({children})=>{
                 type : 'GET_USER_REPOS',
                 payload : user_repos
             })
-            console.log(user_repos);
+            
        
 
         
