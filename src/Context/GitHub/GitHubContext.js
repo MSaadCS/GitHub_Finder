@@ -15,6 +15,7 @@ export const GitHubProvider = ({children})=>{
         Spinner : false,
         search_text : '',
         userData : {},
+        response_msg : '',
         userRepos : []
     }
 
@@ -37,12 +38,25 @@ export const GitHubProvider = ({children})=>{
         const api_response = await fetchAPI.json();
 
         const search_result = api_response.items;
-       
-        dispatch({
-            type : 'GET_USERS',
-            payload : search_result
-        })
+        console.log(search_result.length);
+        if (search_result.length === 0) {
+            
+            dispatch({
+                type : 'NO_USERS_FOUND',
+                payload : 'NO RESULTS FOUND!'
+            })
+            
+        }else{
+            dispatch({
+                type : 'GET_USERS',
+                payload : search_result
+            })
+    
+        }
 
+        
+       
+        
         
     }
 
@@ -124,6 +138,7 @@ export const GitHubProvider = ({children})=>{
         usersList : state.usersList,
         Spinner : state.Spinner,
         search_text : state.search_text,
+        response_msg : state.response_msg,
         userData : state.userData,
         userRepos : state.userRepos,
         userRequestAPI,

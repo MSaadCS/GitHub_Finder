@@ -5,7 +5,7 @@ import { UserSearch } from "../components/Users/UserSearch";
 
 
 export const Home = () => {
-  const ctxData = useContext(GitHubProvider);
+  // const ctxData = useContext(GitHubProvider);
   return (
     <>
    
@@ -16,9 +16,9 @@ export const Home = () => {
           </div>
         </div> 
       </div>
-      {ctxData.usersList.length !== 0 ? 
+      
       <UserRequest/>
-      : ctxData.usersList }
+      
     </>
   )
 }

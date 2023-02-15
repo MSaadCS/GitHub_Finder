@@ -6,6 +6,13 @@ const gitHubReducer = (state , action)=>{
             usersList : action.payload,
             Spinner : false
             }
+        case 'NO_USERS_FOUND':
+            return {
+                ...state,
+                usersList : [],
+                response_msg : action.payload,
+                Spinner : false
+            }
         case 'GET_USER':
             return {
                 ...state,
