@@ -38,7 +38,6 @@ export const GitHubProvider = ({children})=>{
         const api_response = await fetchAPI.json();
 
         const search_result = api_response.items;
-        console.log(search_result.length);
         if (search_result.length === 0) {
             
             dispatch({
@@ -80,7 +79,7 @@ export const GitHubProvider = ({children})=>{
                 type : 'GET_USER',
                 payload : user_infos
             })
-            console.log(user_infos);
+         
         }
      
         
